@@ -1,0 +1,98 @@
+#root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.main{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+nav{
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  height: 5rem;
+  z-index:2;
+}
+.formatNav{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 100px;
+  width: 50%;
+  height: 100%;
+}
+h1{
+  font-size: 3rem;
+  color: whitesmoke;
+  font-weight: bold;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, .4);
+  margin-right: 5%;
+}
+label{
+  font-size: 3rem;
+  color: whitesmoke;
+  font-weight: bold;
+  margin-right: 20px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, .7);
+}
+input{
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3rem;
+  width: 300px;
+  border: none;
+  border-radius: 15px;
+  padding: .25rem;
+  font-size: 1.5rem;
+  background-color: rgba(240, 248, 255, .7);
+}
+button {
+  margin: 0 2rem; 
+  height: 3rem;
+  padding: 0 1rem;
+  border: none;
+  border-radius: 15px;
+  font-size: 1rem;
+  background-color: rgba(255, 115, 0, 0.9);
+  box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, .5);
+  color: rgb(255, 255, 255);
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 2rem;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, .4);
+  cursor: pointer;
+  transition: background-color 0.1s;
+}
+
+button:hover {
+  background-color: rgba(110, 224, 186, 0.9);
+}
+.hidden {
+  opacity: 0;
+}
+
+.visible {
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+
+.canvas{
+  height: 95%;
+  width: 95%;
+}
+p{
+  margin: 0;
+}
