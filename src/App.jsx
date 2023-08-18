@@ -1,7 +1,7 @@
 
 import './App.css'
 import { useState } from 'react'
-import ScreenScene from './ScreenScene'
+import ScreenScene from './components/ScreenScene'
 
 
 
