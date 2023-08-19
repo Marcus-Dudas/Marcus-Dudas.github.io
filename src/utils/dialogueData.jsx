@@ -27,6 +27,7 @@ const graph ={
         
         input : true,
         responses: [
+          {text: 'How do I get one?', nextNode: 11},
           { text: "Actually, I don't know it.", nextNode: 5 },
         ]
       },
@@ -34,38 +35,71 @@ const graph ={
         talk: 'YYou\'re in luck, then, because I was in charge of collecting his finest samples. What\'s your samples key?',
         input : true,
         responses: [
-          {text: 'How do I get one?', nextNode: 1},
+          {text: 'How do I get one?', nextNode: 11},
           {text: "Actually, I don't know it.", nextNode: 5 },
         ]
       },
       5: {
-        talk: 'OOkay, okay. No worries. What now, though?',
+        talk: 'OOkay, okay. Right. Gotcha.',
         input : false,
         responses: [
-          {text: 'I do have a portfolio key. Want to hear it?', nextNode: 1},
-          {text: "I do have a samples key. Want to hear it?", nextNode: 1 },
+          {text: 'I do have a portfolio key. Want to hear it?', nextNode: 10},
+          {text: "I do have a samples key. Want to hear it?", nextNode: 10 },
           {text: "Dance. DANCE, I say.", nextNode: 1 },
           
         ]
       },
       6: {
-        talk: 'OOh, just a PhD student with a pilot\'s license. I\'m writing a thesis on cryptids- you know, bigfoots, chupacabras. Hence my search.',
+        talk: 'II\'m a doctoral student with an expired pilot\'s license. I\'m writing a thesis on cryptids- bigfoots, chupacabras.',
         input : false,
         responses: [
-          {text: 'I do have a portfolio key. Want to hear it?', nextNode: 1},
-          {text: "I do have a samples key. Want to hear it?", nextNode: 1 },
-          {text: "Dance. DANCE, I say.", nextNode: 1 },
+          {text: 'And where are we?', nextNode: 7},
+          {text: "Very well. (go back)", nextNode: 9 },
           
         ]
       },
       7: {
-        talk: 'Probably the Everglades. Definitely not the place we meant to reach.',
-        input : true,
+        talk: 'PProbably the Everglades. Definitely not Kansas.',
+        input : false,
         responses: [
-          {text: 'I do have a portfolio key. Want to hear it?', nextNode: 1},
-          {text: "I do have a samples key. Want to hear it?", nextNode: 1 },
+          {text: 'And who are you?', nextNode: 6},
+          {text: "Very well. (go back)", nextNode: 9 },
+          
+        ]
+      },
+      8: {
+        talk: 'PPlease don\'t ask me to do that again. I\'m pathologically obedient.',
+        input : false,
+        responses: [
+          {text: 'AGAIN!', nextNode: 6},
+          {text: "Very well. (go back)", nextNode: 5 },
+          
+        ]
+      },
+      9: {
+        talk: 'WWhat now?',
+        input : false,
+        responses: [
+          {text: 'I want to see his dev work', nextNode: 10},
+          {text: "I want to see his writing samples.", nextNode: 10 },
+          {text: "Point me to LinkedIn to ask for a key.", nextNode: 10 },
           {text: "Dance. DANCE, I say.", nextNode: 1 },
           
+        ]
+      },
+      10: {
+        talk: 'SSure. What\'s your key?',
+        input : true,
+        responses: [
+          {text: 'I lied.', nextNode: 9},
+        ]
+      },
+      11: {
+        talk: 'HHe\'ll give you one over LinkedIn if you haven\'t already seen one in a resume or application.',
+        input : false,
+        responses: [
+          {text: 'Point me to LinkedIn (opens new tab)', nextNode: 9},
+          {text: 'Very well. (go back)', nextNode: 9},
         ]
       },
 }
