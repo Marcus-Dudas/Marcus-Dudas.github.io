@@ -63,3 +63,40 @@ form{
     margin: 0;
     padding: 0;
 }
+
+@media (min-width: 1025px) and (max-width: 1366px) {
+    
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+
+}
+@media (max-width: 767px) {
+    .stableTextContainer{
+        display: flex;
+        height: 250px;
+        width: 350px;
+    }
+    .buttonsContainer{
+        min-height: 35%;
+        width: 85%;
+        transition: opacity 0.2s ease;
+    }
+    .speechbubble{
+        width: 85%;
+        min-height: 35%;
+    }
+    
+    .usertalk{
+        width: 100%;
+        font-size: .8rem;
+    }
+    .submitspeech{
+        width: 100%;
+        font-size: .8rem;
+        margin-top: .1rem;
+    }
+    p{
+        padding: 1rem;
+        font-size: medium;
+    }
+}

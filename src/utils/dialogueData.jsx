@@ -2,7 +2,7 @@
 const graph ={
     1: {
         talk:
-          ".... Hi. Are you lost, too? I crashed my plane searching for the elusive Mister Dudas. What are you doing here?"
+          "... Hi. Are you lost, too? I crashed my plane searching for the elusive Mister Dudas. What are you doing here?"
                 ,
         
         responses: [
@@ -23,7 +23,7 @@ const graph ={
         ]
       },
       3: {
-        talk: 'SSo you have the key to his portfolio? Fascinating! What is it?',
+        talk: 'So you have the key to his portfolio? Fascinating! What is it?',
         
         input : true,
         responses: [
@@ -32,7 +32,7 @@ const graph ={
         ]
       },
       4: {
-        talk: 'YYou\'re in luck, then, because I was in charge of collecting his finest samples. What\'s your samples key?',
+        talk: 'You\'re in luck, then, because I was in charge of collecting his finest samples. What\'s your samples key?',
         input : true,
         responses: [
           {text: 'How do I get one?', nextNode: 11},
@@ -40,7 +40,7 @@ const graph ={
         ]
       },
       5: {
-        talk: 'OOkay, okay. Right. Gotcha.',
+        talk: 'Okay, okay. Right. Gotcha.',
         input : false,
         responses: [
           {text: 'I do have a portfolio key. Want to hear it?', nextNode: 10},
@@ -50,7 +50,7 @@ const graph ={
         ]
       },
       6: {
-        talk: 'II\'m a doctoral student with an expired pilot\'s license. I\'m writing a thesis on cryptids- bigfoots, chupacabras.',
+        talk: 'I\'m a doctoral student with an expired pilot\'s license. I\'m writing a thesis on cryptids- bigfoots, chupacabras.',
         input : false,
         responses: [
           {text: 'And where are we?', nextNode: 7},
@@ -59,7 +59,7 @@ const graph ={
         ]
       },
       7: {
-        talk: 'PProbably the Everglades. Definitely not Kansas.',
+        talk: 'Probably the Everglades. Definitely not Kansas.',
         input : false,
         responses: [
           {text: 'And who are you?', nextNode: 6},
@@ -68,7 +68,7 @@ const graph ={
         ]
       },
       8: {
-        talk: 'PPlease don\'t ask me to do that again. I\'m pathologically obedient.',
+        talk: 'Please don\'t ask me to do that again. I\'m pathologically obedient.',
         input : false,
         responses: [
           {text: 'AGAIN!', nextNode: 8, dance: true},
@@ -77,7 +77,7 @@ const graph ={
         ]
       },
       9: {
-        talk: 'WWhat now?',
+        talk: 'What now?',
         input : false,
         responses: [
           {text: 'I want to see his dev work', nextNode: 10},
@@ -88,14 +88,14 @@ const graph ={
         ]
       },
       10: {
-        talk: 'WWhat\'s your key?',
+        talk: 'What\'s your key?',
         input : true,
         responses: [
           {text: 'I lied.', nextNode: 9},
         ]
       },
       11: {
-        talk: 'HHe\'ll give you one over LinkedIn if you haven\'t already seen one in a resume or application.',
+        talk: 'He\'ll give you one over LinkedIn if you haven\'t already seen one in a resume or application.',
         input : false,
         responses: [
           {text: 'Point me to LinkedIn (opens new tab)', nextNode: 10, linkedin: true},

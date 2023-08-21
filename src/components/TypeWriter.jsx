@@ -4,8 +4,8 @@
 import {useState, useEffect} from 'react'
 
 export default function TypeWriter ({text, speed=25, setChoiceVisibility}) {
-    const [renderedText, setRenderedText] = useState('')
-    useEffect(() => {
+    const [renderedText, setRenderedText] = useState(text)
+    /*useEffect(() => {
         setRenderedText('')
         setChoiceVisibility(false)
         let index = 0;
@@ -20,7 +20,12 @@ export default function TypeWriter ({text, speed=25, setChoiceVisibility}) {
           }
         }
         typeCharacter();
-    }, [text, speed]);
-
+    }, [text, speed]);*/
+    useEffect(()=>{
+      setRenderedText(text)
+      setTimeout(()=>{
+        setChoiceVisibility(true)
+      }, 1000)
+    }, [text, setChoiceVisibility])
     return <p>{renderedText}</p>
 }
