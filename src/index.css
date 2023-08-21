@@ -10,8 +10,9 @@
   color-scheme: light dark;
   background-image: url('./assets/jungle.webp');
   background-repeat: no-repeat;
-  background-position: bottom right;
+  background-position: bottom center;
   background-size: cover;
+  overflow: hidden;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;

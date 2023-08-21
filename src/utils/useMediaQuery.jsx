@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react'
 
 function debounce(func, delay) {
@@ -9,41 +10,23 @@ function debounce(func, delay) {
   }
 }
 
-export function useMediaQuery() {
-  const [output, setOutput] = useState(0)
+export function useMediaQuery(small, medium, large) {
+  const [output, setOutput] = useState(large);
 
   const handleResize = debounce(function handleResize() {
-    let screenSize;
-
     if (window.matchMedia('(max-width: 767px)').matches) {
-      screenSize = 'small';
+      setOutput(small);
     } else if (window.matchMedia('(min-width: 768px) and (max-width: 1024px)').matches) {
-      screenSize = 'medium';
-    } else if (window.matchMedia('(min-width: 1025px) and (max-width: 1366px)').matches) {
-      screenSize = 'large';
+      setOutput(medium);
     } else {
-      screenSize = 'x-large';
+      setOutput(large);
     }
-
-    switch (screenSize) {
-      case 'small':
-        setOutput(0);
-        break;
-      case 'medium':
-        setOutput(1);
-        break;
-      case 'large':
-        setOutput(2);
-        break;
-      default:
-        setOutput(2);
-    }
-  }, 1000)
+  }, 1000);
 
   useEffect(() => {
-    handleResize()
+    handleResize();
 
-    window.addEventListener('resize', handleResize)
+    window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize); // cleanup
   }, []);
 

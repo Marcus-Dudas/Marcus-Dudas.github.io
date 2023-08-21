@@ -6,14 +6,20 @@ export default function PasswordEntry () {
     const [submitLock, setSubmitLock] = useState(false)
     const handleSubmit = (event) => {
       event.preventDefault()
-      //fetch request here, when ready
       if(submitLock){return}
-      console.log('submitted value:', inputValue);
+      if (inputValue === '8u8u') {
+        //window.open('https://marcusd.dev')
+        console.log('navigated to marcusd.dev')
+      } else if (inputValue === 'ijij') {
+        //window.open('https://netlify site')
+        console.log('navigated to netlify site')
+      } else {
+        return
+      }
       setSubmitLock(true)
     }
     useEffect(()=>{
       if (submitLock === true) {
-        //Replace time delay with http status SUCCESS
         setTimeout(()=> setSubmitLock(false), 3000)
       }
     }, [submitLock])

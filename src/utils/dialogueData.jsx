@@ -45,7 +45,7 @@ const graph ={
         responses: [
           {text: 'I do have a portfolio key. Want to hear it?', nextNode: 10},
           {text: "I do have a samples key. Want to hear it?", nextNode: 10 },
-          {text: "Dance. DANCE, I say.", nextNode: 1 },
+          {text: "Dance. DANCE, I say.", nextNode: 8, dance: true },
           
         ]
       },
@@ -71,8 +71,8 @@ const graph ={
         talk: 'PPlease don\'t ask me to do that again. I\'m pathologically obedient.',
         input : false,
         responses: [
-          {text: 'AGAIN!', nextNode: 6},
-          {text: "Very well. (go back)", nextNode: 5 },
+          {text: 'AGAIN!', nextNode: 8, dance: true},
+          {text: "Very well. (go back)", nextNode: 9},
           
         ]
       },
@@ -82,13 +82,13 @@ const graph ={
         responses: [
           {text: 'I want to see his dev work', nextNode: 10},
           {text: "I want to see his writing samples.", nextNode: 10 },
-          {text: "Point me to LinkedIn to ask for a key.", nextNode: 10 },
-          {text: "Dance. DANCE, I say.", nextNode: 1 },
+          {text: "Point me to LinkedIn (opens new tab).", nextNode: 10, linkedin: true },
+          {text: "Dance. DANCE, I say.", nextNode: 8, dance: true },
           
         ]
       },
       10: {
-        talk: 'SSure. What\'s your key?',
+        talk: 'WWhat\'s your key?',
         input : true,
         responses: [
           {text: 'I lied.', nextNode: 9},
@@ -98,7 +98,7 @@ const graph ={
         talk: 'HHe\'ll give you one over LinkedIn if you haven\'t already seen one in a resume or application.',
         input : false,
         responses: [
-          {text: 'Point me to LinkedIn (opens new tab)', nextNode: 9},
+          {text: 'Point me to LinkedIn (opens new tab)', nextNode: 10, linkedin: true},
           {text: 'Very well. (go back)', nextNode: 9},
         ]
       },
