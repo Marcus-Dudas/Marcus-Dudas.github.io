@@ -12,7 +12,7 @@ export default function Conversation ({setAnimationIndex}){
     const responsemap = speech.responses.map((response, index)=> {
         if (response.linkedin === true){
             return (
-                <a key={index} href="linkedin.com" target="_blank" rel="noopener noreferrer" title="LinkedIn" aria-label="open new linked in tab" className='usertalk'>
+                <a key={index} href="https://www.linkedin.com/in/marcus-dudas-7b14569b/" target="_blank" rel="noopener noreferrer" title="LinkedIn" aria-label="open new linked in tab" className='usertalk'>
                     {response.text}
                 </a>
                 )}

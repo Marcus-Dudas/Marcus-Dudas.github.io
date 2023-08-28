@@ -43,7 +43,7 @@ export default function App() {
             onClick={handleSubmit}
           > submit
           </button>
-          <a href="https://www.linkedin.com/?original_referer=https%3A%2F%2Fwww.google.com%2F" target="_blank" rel="noopener noreferrer" title="LinkedIn" aria-label="open new linked in tab" className={showInput ? 'visible' : 'hidden'} >
+          <a href= "https://www.linkedin.com/in/marcus-dudas-7b14569b/" target="_blank" rel="noopener noreferrer" title="LinkedIn" aria-label="open new linked in tab" className={showInput ? 'visible' : 'hidden'} >
             LinkedIn
           </a>
         </div>
